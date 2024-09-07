@@ -357,7 +357,7 @@ WHERE
         public string BuildQueryToGetReadOnlyColumns(string schemaParamName, string tableParamName)
         {
             string query = "select COLUMN_NAME as COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS " +
-                $"where TABLE_SCHEMA = {schemaParamName} and TABLE_NAME = {tableParamName} and GENERATION_EXPRESSION != '';";
+                $"where TABLE_SCHEMA = {schemaParamName} and TABLE_NAME = {tableParamName};";
             return query;
         }
 
